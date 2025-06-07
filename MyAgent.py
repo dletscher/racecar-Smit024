@@ -1,3 +1,4 @@
+
 import random
 
 class Agent:
@@ -21,9 +22,9 @@ class Agent:
             return random.choice(possibleActions)
 
         #decide left and right turn
-        if rightSide + 0.3 < leftSide:
+        if rightSide + 0.2 < leftSide:
             move = 'left'
-        elif leftSide + 0.3 < rightSide:
+        elif leftSide + 0.2 < rightSide:
             move = 'right'
         else:
             move = 'straight'
@@ -33,18 +34,18 @@ class Agent:
             if (move, 'brake') in possibleActions:
                 return (move, 'brake')
 
-        if velocity > 0.15:
+        if velocity > 0.19:
             if (move, 'brake') in possibleActions:
                 return (move, 'brake')
             elif (move, 'coast') in possibleActions:
                 return (move, 'coast')
 
         #speedign on straight road
-        if velocity <= 0.15 and center > 1.0 and left > 0.8 and right > 0.8:
+        if velocity <= 0.3 and center > 0.8 and left > 0.8 and right > 0.8:
             if (move, 'accelerate') in possibleActions:
                 return (move, 'accelerate')
 
-        #if nothing matches, just coast (means no accelerate or brake)
+        #just coast (means no accelerate or brake)
         if (move, 'coast') in possibleActions:
             return (move, 'coast')
 
