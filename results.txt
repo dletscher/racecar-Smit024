@@ -2,7 +2,7 @@ Oval	Not simulated
 Spiral	Not simulated
 Small_Circle	Not simulated
 Large_Circle	117.61363145241322
-Fast	Not simulated
+Fast	115.55564760754606
 
-Score	117.61363145241322
-grade	76.60511179465496
+Score	116.58463952997964
+grade	76.21923982374237
