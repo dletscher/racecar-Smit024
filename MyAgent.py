@@ -42,7 +42,7 @@ class Agent:
                     return (move, 'coast')
 
             #speedign on straight road    
-            if velocity <= 0.4 and center > 0.8 and left > 0.8 and right > 0.8:
+            if velocity <= 0.3 and center > 0.8 and left > 0.8 and right > 0.8:
                 if (move, 'accelerate') in possibleActions:
                     return (move, 'accelerate')
 
